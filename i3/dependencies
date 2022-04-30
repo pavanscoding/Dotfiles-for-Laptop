@@ -1,0 +1,17 @@
+# !/bin/sh
+
+# make sure to uncomment the required sections in pacman.conf
+
+sudo pacman -S picom i3-wm networkmanager network-manager-applet
+nm-connection-editor pipewire-pulse pipewire-media-session bluez
+bluez-utils blueman pavucontrol dunst gvfs polkit-gnome maim xclip
+firefox rofi steam discord i3blocks i3lock obs-studio base-devel
+git thunar discord feh playerctl wpa_supplicant wireless_tools
+lm-sensors acpi thermald;
+
+pacaur -S zoom i3-gaps-rounded-git adwaita-blue-icon-theme-git
+adwaita-icon-theme-git adwaita-x-dark-and-light-theme
+awesome-terminal-fonts-patched faba-icon-theme noto-fonts-emoji
+laptop-mode-tools;
+
+# install spotify deb file later

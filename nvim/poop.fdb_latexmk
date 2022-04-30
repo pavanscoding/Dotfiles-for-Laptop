@@ -1,0 +1,15 @@
+# Fdb version 3
+["pdflatex"] 1651342289 "poop.tex" "poop.pdf" "poop" 1651342289
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1650183167 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texmf-dist/tex/latex/base/article.cls" 1650183167 20144 8a7de377ae7a11ee924a7499611f5a9d ""
+  "/usr/share/texmf-dist/tex/latex/base/size10.clo" 1650183167 8448 96f18c76bf608a36ee6fbf021ac1dd32 ""
+  "/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1650183167 31644 9b75b7ffdb38fbd7bb4502cd6b086a3c ""
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1651341794 4408072 42ceaa83bae76aebad711d3f3dd7f55f ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1651341785 2927661 30fa12142c68e025b26a93ab468834f3 ""
+  "poop.aux" 1651342289 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "poop.tex" 1651342289 64 9da2b0e97441a8b52d3cc67b83373e97 ""
+  (generated)
+  "poop.aux"
+  "poop.log"
+  "poop.pdf"

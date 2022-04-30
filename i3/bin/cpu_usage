@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# https://github.com/shreve/shreve.io/blob/master/content/posts/calculating-current-cpu-usage-on-linux.md
+# Write the current state to a temp file
+save_current() {
+    grep 'cpu ' /proc/stat > /tmp/cpustat
+}
+
+# If the temp file doesn't exist, save it now.
+# This means the current reading will be pretty inaccurate,
+# usually too high, because it measures CPU usage from now
+# until 2 lines later in this program.
+[ ! -e /tmp/cpustat ] && save_current
+
+# Load the previous state from the temp file, and capture
+# the current output.
+previous=$(cat /tmp/cpustat)
+current=$(grep 'cpu ' /proc/stat)
+
+# Define the awk script to parse the two lines of input.
+# For the first line (NR == 1), save the values.
+# For subsequent rows (NR > 1), calculate the difference
+# between this line and the first line and calculate the
+# total average percentage.
+awkscript='NR == 1 {
+             owork=($2+$4);
+             oidle=$5;
+           }
+           NR > 1 {
+             work=($2+$4)-owork;
+             idle=$5-oidle;
+             printf "%.1f%", 100 * work / (work+idle)
+           }'
+
+# Execute the awk script against the two lines of input
+# and save the string.
+usage=$(echo -e "$previous\n$current" | awk "$awkscript")
+
+# Save the current value. The next time you run this script
+# will calculate average usage since this line was run.
+save_current
+
+echo "💾 $usage"
+

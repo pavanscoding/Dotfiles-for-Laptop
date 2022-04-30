@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+$f=%Y:%m:%d:%H:%M:%S.png
+scrot $f
+mv $f ~/Pictures/
