@@ -20,6 +20,7 @@ let g:coc_global_extensions = [
         \ 'coc-css',
         \ 'coc-lsp-wl',
         \ 'coc-java',
+        \ 'coc-lua',
         \ ]
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
@@ -36,7 +37,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'SmiteshP/nvim-gps'
-Plug 'kyazdani42/nvim-tree.lua'
+" Plug 'kyazdani42/nvim-tree.lua'
 " Plug 'Yggdroot/indentLine'
 Plug 'nvim-lua/plenary.nvim'
 " install ripgrep and sqlite
@@ -60,11 +61,24 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'windwp/nvim-ts-autotag'
 " Plug 'floobits/floobits-neovim'
-" make sure u get the extension for cphelper
+" make sure u get the chrome extension for cphelper
 Plug 'p00f/cphelper.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'shaunsingh/nord.nvim'
 Plug 'rcarriga/nvim-notify'
 Plug 'mboughaba/i3config.vim'
+Plug 'andweeb/presence.nvim'
+" Plug 'akinsho/toggleterm.nvim'
+" Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
+" Plug 'feline-nvim/feline.nvim'
+Plug 'ghillb/cybu.nvim'
+Plug 'Pocco81/AutoSave.nvim'
+Plug 'max397574/colortils.nvim'
+Plug 'CRAG666/code_runner.nvim'
+Plug 'nvim-neo-tree/neo-tree.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'makerj/vim-pdf'
+Plug 'KadoBOT/nvim-spotify', { 'do': 'make' }
+" Plug 'windwp/windline.nvim'
 set spelllang=en_us
 call plug#end()

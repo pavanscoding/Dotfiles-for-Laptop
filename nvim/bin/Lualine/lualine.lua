@@ -1,4 +1,7 @@
-local gps=require("nvim-gps")
+-- local gps=require("nvim-gps")
+-- local status = require'nvim-spotify'.status
+-- status:start()
+
 require'lualine'.setup {
   options = {
     icons_enabled = true,
@@ -12,10 +15,10 @@ require'lualine'.setup {
     lualine_b = {'branch', 'diff',
                   {'diagnostics', sources={'coc'}}},
     -- lualine_c = {'filename'},
-    lualine_c = {
-                {'filename'},
-				{ gps.get_location, cond = gps.is_available },
-			},
+    -- lualine_c = {
+    --     {'filename', status.listen},
+	-- },
+    -- lualine_c = {'filename',status.listen,cava_comp},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}

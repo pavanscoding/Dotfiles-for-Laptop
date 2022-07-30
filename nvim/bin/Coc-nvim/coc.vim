@@ -161,5 +161,8 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>o
 let g:coc_snippet_next = ','
-let g:coc_snippet_prev = '*'
+let g:coc_snippet_prev = '<A-,>'
 " let g:coc_user_config['languageserver'].ccls.initializationOptions.clang.extraargs='-std=c++17'
+" hi! CocErrorSign guifg=#d1666a
+" hi! CocInfoSign guibg=#89CFF0
+" hi! CocWarningSign guifg=#d1cd66

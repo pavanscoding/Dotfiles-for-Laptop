@@ -1,8 +1,8 @@
 {
-/* "diagnostic.signOffset": 9999999, */
 "diagnostic.errorSign": " ",
 "diagnostic.warningSign": " ",
 "diagnostic.infoSign": " ",
+"diagnostic.hintSign": " ",
 "diagnostic.refreshOnInsertMode": true,
 "diagnostic.virtualTextPrefix": "■ ",
 "diagnostic.checkCurrentLine": true,
@@ -10,23 +10,15 @@
 "coc.source.around.enable": false,
 "coc.source.file.enable": false,
 "clangd.fallbackFlags": [
-  "-std=c++17",
+   "-xc++",
+   "-std=c++17",
   "-O2",
   "-Wall" 
 ],
-"clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.0/clangd_14.0.0/bin/clangd",
+"clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd",
 "python.pythonPath": "/usr/bin/python",
 "python.venvPath": "/usr/local/lib/python3.10/site-packages",
 "diagnostic.virtualTextCurrentLineOnly": false,
 "diagnostic.virtualText": true,
-"diagnostic.checkCurrentLine": true,
-// "python.linting.enabled": false
-/* "clangd.arguments": ["-std=c++17"] */
-/* "cSpell.enabledLanguageIds": [ */
-/*     "tex" */
-/* ], */
-/* "cSpell.languageSettings": [ */
-/*     {"languageId": "tex", "dictionaries": ["latex"]} */
-/* ] */
-"diagnostic.enableMessage": "jump",
+"diagnostic.enableMessage": "jump"
 }

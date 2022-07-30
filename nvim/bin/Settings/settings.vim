@@ -14,7 +14,7 @@ set foldmethod=indent
 set foldlevel=99
 nnoremap <silent> <esc> :noh<cr><esc>
 autocmd FileType tex setlocal spell
-au BufNewFile,BufRead *.py,*.java,*.cpp,*.c,*.css,*.rkt,*.h,*.html,*.tex,*.vim,*.vimrc,*.json,*.lua,*.c
+au BufNewFile,BufRead *.py,*.java,*.cpp,*.c,*.rkt,*.h,*.tex,*.vim,*.vimrc,*.json,*.lua,*.c
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
@@ -24,6 +24,15 @@ au BufNewFile,BufRead *.py,*.java,*.cpp,*.c,*.css,*.rkt,*.h,*.html,*.tex,*.vim,*
     \ set fileformat=unix |
     \ set linebreak
 
+au BufNewFile,BufRead *.css,*.html,*.js,*.ts,*.jsx,*.tsx
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set textwidth=200000 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
+    \ set linebreak
 set encoding=UTF-8
 
 highlight Comment cterm=italic gui=italic

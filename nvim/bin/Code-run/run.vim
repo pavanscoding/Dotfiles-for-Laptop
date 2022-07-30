@@ -6,18 +6,27 @@ augroup compileandrun
     nnoremap <F3> :CphReceive<cr>
     autocmd filetype cpp nnoremap <buffer> <F4> :CphTest<cr>
     autocmd filetype cpp nnoremap <buffer> <F8> :w <bar>!g++ -std=c++17 -Wshadow -Wall -O2 -Wno-unused-result "%"<cr> :vnew <bar> :te ./a.out <cr><cr>i
+    " autocmd filetype c nnoremap <buffer> <f3> :w<cr>:vsplit<cr>:vert ter gcc "%"<cr>i 
+    " autocmd filetype c nnoremap <buffer> <f4> :vnew <bar> :te ./a.out <cr>i
+    autocmd filetype c nnoremap <buffer> <F8> :w <bar>!gcc "%"<cr> :vnew <bar> :te ./a.out <cr><cr>i
     " autocmd filetype cpp nnoremap <buffer> <F8> :CompetitestRun <cr>
     "Python 
-    autocmd Filetype python nnoremap <buffer> <f8> :w<CR>:vsplit<cr>:vert ter python3 "%"<CR>i
+    autocmd Filetype python nnoremap <buffer> <F8> :w <cr> :RunFile<cr> i
+    " autocmd Filetype python nnoremap <buffer> <f8> :w<CR>:vsplit<cr>:vert ter python3 "%"<CR>i
+    " Lua
+    " autocmd Filetype lua nnoremap <buffer> <f8> :w<CR>:vsplit<cr>:vert ter lua "%"<CR>i
     "Latex
     autocmd filetype tex nnoremap <buffer> <f8> :w <bar>:VimtexCompile <cr>
+    autocmd filetype javascript,html nnoremap <buffer> <f8> :w <bar>:!npm start <cr>
     " autocmd filetype tex nnoremap <buffer> <f7> :w <bar>!latexmk %<cr>:w <bar>!asy -noV %:r-*.asy<cr>:w <bar> !latexmk %:r<cr><cr>:w<cr>
     "if there is an error with the first one, use the bottom one
     " autocmd filetype tex nnoremap <buffer> <f7> :w <bar>!latexmk %:r<cr>:w <bar>!asy -noV -render=0 %:r-*.asy<cr>:w <bar> !latexmk %:r<cr><cr>w<cr>
     " Java
-     autocmd filetype java nnoremap <buffer> <f3> :w<cr>:vsplit<cr>:vert ter javac "%"<cr>i 
+     " autocmd filetype java nnoremap <buffer> <f3> :w<cr>:vsplit<cr>:vert ter javac "%"<cr>i 
      " autocmd filetype java nnoremap <buffer> <f4> :vnew <bar> :te java "%:h" <cr>i
-     autocmd filetype java nnoremap <buffer> <f4> :!java -cp %:p:h %:t:r <cr> i
-     autocmd filetype java nnoremap <buffer> <F8> :w <bar>!javac "%"<cr> :vnew <bar> :te java "%:h" <cr><cr>i
+     " autocmd filetype java nnoremap <buffer> <f4> :!java -cp %:p:h %:t:r <cr> i
+     " autocmd filetype java nnoremap <buffer> <F8> :w <bar>!javac "%"<cr> :vnew <bar> :te java "%:h" <cr><cr>i
      " autocmd filetype markdown nnoremap <buffer>  :w <bar>:call Compile()<cr><cr>:call Preview()<cr><cr><cr>
 augroup END
+
+nnoremap <buffer> <F8> :Run<cr>
